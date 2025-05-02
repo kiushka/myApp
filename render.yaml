@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: store-webapp
+    env: python
+    buildCommand: ""
+    startCommand: "python app.py"
