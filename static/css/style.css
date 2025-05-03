@@ -1,24 +1,87 @@
-:root {
-    --irancell-blue: #004a8d;
-    --irancell-yellow: #ffd700;
+/* استایل‌های جدید برای خدمات خودرو */
+.vehicle-services {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
 }
 
-body {
-    background-color: #f7f7f7;
-    font-family: 'Vazirmatn', Tahoma, sans-serif;
+.section-title {
+    text-align: center;
+    color: #004a8d;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
 }
 
-/* استایل‌های اختصاصی برای نسخه فلسک */
-.logo-container {
-    padding: 15px;
-    background: linear-gradient(135deg, 
-        var(--irancell-blue) 60%, 
-        #003366);
-}
-
-.service-card {
+.vehicle-service {
+    background: white;
     border-radius: 12px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-/* بقیه استایل‌ها مطابق نیاز پروژه */
+.vehicle-service:hover {
+    transform: translateY(-5px);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-icon {
+    font-size: 2rem;
+    color: #004a8d;
+}
+
+.service-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #004a8d;
+    color: white!important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.service-btn:hover {
+    background: #003366;
+}
+
+.important-notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background: #fff;
+    margin: 3rem auto;
+    max-width: 1200px;
+}
+
+.note-card {
+    border: 2px solid #eee;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.note-card i {
+    font-size: 2.5rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
