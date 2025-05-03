@@ -1,4 +1,3 @@
-{% raw %}
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -23,7 +22,85 @@
         </div>
     </header>
 
-    <!-- بقیه کدهای HTML با استفاده از url_for برای منابع استاتیک -->
+    <nav>
+        <a href="#services"><i class="fas fa-concierge-bell"></i> خدمات</a>
+        <a href="#location"><i class="fas fa-map-marked-alt"></i> موقعیت</a>
+        <a href="#contact"><i class="fas fa-headset"></i> تماس</a>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>مرکز خدمات ایرانسل 35012 صومعه سرا</h1>
+            <p>ارائه دهنده خدمات تخصصی ایرانسل در استان گیلان</p>
+        </div>
+    </section>
+
+    <div class="contact-box">
+        <h2>اطلاعات تماس</h2>
+        <div class="contact-details">
+            <p><i class="fas fa-phone"></i> تلفن: 01344339109</p>
+            <p><i class="fas fa-map-marker-alt"></i> آدرس: صومعه سرا کنار شیرینی اشهدی - کدپستی 4361915615</p>
+        </div>
+        <button class="appointment-btn">
+            دریافت نوبت آنلاین
+        </button>
+    </div>
+
+    <section id="services" class="services">
+        <h2>خدمات تخصصی ما</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='img/sim-card-icon.svg') }}" 
+                     alt="سیم کارت" 
+                     class="service-icon">
+                <h3>فروش سیم کارت</h3>
+                <p>انواع مودم‌های سیمکارتی با گارانتی رسمی</p>
+            </div>
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='img/activation-icon.svg') }}" 
+                     alt="فعالسازی" 
+                     class="service-icon">
+                <h3>فعالسازی سیمکارت</h3>
+                <p>فعالسازی و رفع مشکلات سیمکارت</p>
+            </div>
+            <div class="service-card">
+                <img src="{{ url_for('static', filename='img/support-icon.svg') }}" 
+                     alt="پشتیبانی" 
+                     class="service-icon">
+                <h3>پشتیبانی فنی</h3>
+                <p>رفع مشکلات فنی و ارتباطی 24 ساعته</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="map-section">
+        <h2>موقعیت مکانی ما</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d...[مختصات-شیرینی-اشهدی]"
+            class="google-map"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="working-hours">
+                <h4>ساعات کاری</h4>
+                <p>صبح ها: ۹:۳۰ تا ۱۳:۳۰</p>
+                <p>عصرها: ۱۷:۰۰ تا ۱۹:۰۰</p>
+                <p>پنجشنبه ها: فقط صبح ها</p>
+            </div>
+            <div class="emergency-contact">
+                <h4>ارتباط اضطراری</h4>
+                <p><i class="fas fa-phone"></i> 01344339109</p>
+                <p><i class="fas fa-envelope"></i> mtnirancell35012@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© ۲۰۲۳ کلیه حقوق برای مرکز خدمات ایرانسل 35012 محفوظ است</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
-{% endraw %}
