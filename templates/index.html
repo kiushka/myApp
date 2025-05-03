@@ -1,11 +1,28 @@
+{% raw %}
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>فروشگاه ما</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرکز خدمات ایرانسل 35012 - صومعه سرا</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/irancell-logo.svg') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h2>خوش آمدید به وب‌اپ فروشگاه!</h2>
-    <p>این یک نمونه ساده برای تست روی Render است.</p>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='img/irancell-logo.svg') }}" 
+                 alt="لوگو ایرانسل" 
+                 class="main-logo">
+            <div class="brand-text">
+                <h1>مرکز خدمات ایرانسل</h1>
+                <p>کد شعبه: 35012 - صومعه سرا</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- بقیه کدهای HTML با استفاده از url_for برای منابع استاتیک -->
 </body>
 </html>
+{% endraw %}
