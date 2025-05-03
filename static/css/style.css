@@ -1,1 +1,24 @@
+:root {
+    --irancell-blue: #004a8d;
+    --irancell-yellow: #ffd700;
+}
 
+body {
+    background-color: #f7f7f7;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+}
+
+/* استایل‌های اختصاصی برای نسخه فلسک */
+.logo-container {
+    padding: 15px;
+    background: linear-gradient(135deg, 
+        var(--irancell-blue) 60%, 
+        #003366);
+}
+
+.service-card {
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* بقیه استایل‌ها مطابق نیاز پروژه */
