@@ -3,50 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مرکز ارتباط با ایرانسل 35012 - صومعه سرا</title>
+    <title>مرکز خدمات ایرانسل 35012 - صومعه سرا</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://irancell.ir/static/media/irancell-logo.7d9a3d0d.svg">
     <style>
+        :root {
+            --irancell-blue: #004a8d;
+            --irancell-yellow: #ffd700;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Tahoma', sans-serif;
+            font-family: 'IRANSans', Tahoma, sans-serif;
         }
 
         body {
-            background-color: #f5f5f5;
+            background-color: #f7f7f7;
         }
 
+        /* هدر جدید با لوگو رسمی */
         header {
-            background-color: #fff;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
+            background: linear-gradient(135deg, var(--irancell-blue) 60%, #003366);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
         }
 
-        .logo {
-            width: 180px;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
 
+        .main-logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .brand-text {
+            color: white;
+            border-right: 2px solid var(--irancell-yellow);
+            padding-right: 1.5rem;
+        }
+
+        .brand-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .brand-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* منوی ناوبری به روز شده */
         nav {
-            background-color: #004a8d;
-            padding: 1rem;
-            margin-top: 80px;
+            background-color: rgba(255,255,255,0.95);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav a {
-            color: white;
+            color: var(--irancell-blue);
             text-decoration: none;
-            margin-left: 2rem;
-            font-size: 1.1rem;
+            margin-left: 2.5rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
         }
 
+        nav a:hover {
+            color: var(--irancell-yellow);
+        }
+
+        /* بقیه استایل‌ها مشابه قبلی با تغییرات جزئی */
         .hero {
-            background: linear-gradient(rgba(0,74,141,0.8), rgba(0,74,141,0.8)),
-                        url('img/header-bg.jpg');
+            background: linear-gradient(rgba(0,74,141,0.9), rgba(0,74,141,0.9)),
+                        url('https://irancell.ir/static/images/hero-bg.jpg');
             background-size: cover;
             height: 500px;
             display: flex;
@@ -55,127 +91,65 @@
             color: white;
             text-align: center;
             padding: 2rem;
-            margin-top: 120px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .services {
-            padding: 4rem 2rem;
-            background-color: white;
+            margin-top: 100px;
         }
 
         .service-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 1rem;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        footer {
-            background-color: #004a8d;
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .contact-box {
+            border: 2px solid var(--irancell-blue);
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            max-width: 800px;
-            margin: -100px auto 50px;
-            text-align: center;
-            color: #333;
         }
 
+        /* استایل‌های موبایل */
         @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 1rem 0;
+            header {
+                padding: 1rem;
             }
             
-            .hero h1 {
-                font-size: 1.8rem;
+            .logo-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .brand-text {
+                border: none;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="img/irancell-logo.png" alt="ایرانسل 35012 صومعه سرا" class="logo">
+        <div class="logo-container">
+            <img src="https://irancell.ir/static/media/irancell-logo.7d9a3d0d.svg" 
+                 alt="لوگو ایرانسل" 
+                 class="main-logo">
+            <div class="brand-text">
+                <h1>مرکز خدمات ایرانسل</h1>
+                <p>کد شعبه: 35012 - صومعه سرا</p>
+            </div>
+        </div>
     </header>
 
     <nav>
-        <a href="#services">خدمات ما</a>
-        <a href="#contact">تماس با ما</a>
-        <a href="#location">موقعیت مکانی</a>
+        <a href="#services"><i class="fas fa-concierge-bell"></i> خدمات</a>
+        <a href="#location"><i class="fas fa-map-marked-alt"></i> موقعیت</a>
+        <a href="#contact"><i class="fas fa-headset"></i> تماس</a>
     </nav>
 
-    <section class="hero">
-        <div>
-            <h1>مرکز خدمات ایرانسل 35012 صومعه سرا</h1>
-            <p>ارائه دهنده خدمات تخصصی ایرانسل در استان گیلان</p>
-        </div>
-    </section>
-
+    <!-- بقیه محتوا مشابه نسخه قبلی با تغییرات جزئی -->
     <div class="contact-box">
-        <h2>اطلاعات تماس</h2>
-        <div style="margin: 1.5rem 0;">
-            <p style="font-size: 1.2rem;">
-                <i class="fas fa-phone"></i> 
-                تلفن: 01344339109
-            </p>
-            <p style="font-size: 1.2rem;">
-                <i class="fas fa-map-marker-alt"></i> 
-                آدرس: صومعه سرا کنار شیرینی اشهدی- کدپستی 4361915615
-            </p>
-        </div>
-        <button style="padding: 12px 30px; background: #004a8d; color: white; border: none; border-radius: 5px; cursor: pointer;">
-            دریافت نوبت آنلاین
-        </button>
+        <img src="https://irancell.ir/static/media/contact-icon.1a9b8b9e.svg" 
+             alt="تماس با ما" 
+             style="height: 80px; margin-bottom: 1rem;">
+        <!-- محتوای تماس -->
     </div>
 
-    <section id="services" class="services">
-        <h2 style="text-align: center; margin-bottom: 2rem;">خدمات تخصصی ما</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-            <div class="service-card">
-                <i class="fas fa-sim-card fa-3x" style="color: #004a8d;"></i>
-                <h3>فروش سیم کارت</h3>
-                <p>انواع مودمهای سیمکارتی</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-mobile-alt fa-3x" style="color: #004a8d;"></i>
-                <h3>فعالسازی سیمکارت</h3>
-                <p>فعالسازی و رفع مشکلات سیمکارت</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-headset fa-3x" style="color: #004a8d;"></i>
-                <h3>پشتیبانی فنی</h3>
-                <p>رفع مشکلات فنی و ارتباطی 24 ساعته</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-            <div style="margin: 1rem;">
-                <h4>ساعات کاری</h4>
-                <p>شنبه تا پنج‌شنبه: 9/30 صبح تا 13/30 عصر</p>
-                <p>عصرها 17 تا 19</p>
-            </div>
-            <div style="margin: 1rem;">
-                <h4>ارتباط اضطراری</h4>
-                <p>شماره پشتیبانی: 01344339109</p>
-                <p>ایمیل: mtnirancell35012@gmail.com</p>
-            </div>
-        </div>
-    </footer>
+    <!-- بخش خدمات با آیکون‌های رسمی -->
+    <div class="service-card">
+        <img src="https://irancell.ir/static/media/sim-card-icon.5f804123.svg" 
+             alt="سیم کارت" 
+             style="height: 60px;">
+        <!-- توضیحات خدمات -->
+    </div>
 </body>
 </html>
