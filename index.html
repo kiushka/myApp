@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دفتر خدمات ایرانسل</title>
+    <title>مرکز ارتباط با ایرانسل 35012 - صومعه سرا</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -17,7 +17,6 @@
             background-color: #f5f5f5;
         }
 
-        /* هدر */
         header {
             background-color: #fff;
             padding: 1rem;
@@ -29,10 +28,9 @@
         }
 
         .logo {
-            width: 150px;
+            width: 180px;
         }
 
-        /* نوار ناوبری */
         nav {
             background-color: #004a8d;
             padding: 1rem;
@@ -46,10 +44,9 @@
             font-size: 1.1rem;
         }
 
-        /* بخش اصلی */
         .hero {
             background: linear-gradient(rgba(0,74,141,0.8), rgba(0,74,141,0.8)),
-                        url('https://example.com/background.jpg');
+                        url('img/header-bg.jpg');
             background-size: cover;
             height: 500px;
             display: flex;
@@ -58,6 +55,7 @@
             color: white;
             text-align: center;
             padding: 2rem;
+            margin-top: 120px;
         }
 
         .hero h1 {
@@ -65,7 +63,6 @@
             margin-bottom: 1rem;
         }
 
-        /* خدمات */
         .services {
             padding: 4rem 2rem;
             background-color: white;
@@ -80,11 +77,6 @@
             transition: transform 0.3s;
         }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* فوتر */
         footer {
             background-color: #004a8d;
             color: white;
@@ -92,13 +84,17 @@
             margin-top: 4rem;
         }
 
-        .contact-info {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        .contact-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: -100px auto 50px;
+            text-align: center;
+            color: #333;
         }
 
-        /* رسپانسیو */
         @media (max-width: 768px) {
             nav a {
                 display: block;
@@ -113,58 +109,71 @@
 </head>
 <body>
     <header>
-        <img src="https://example.com/irancell-logo.png" alt="Irancell Logo" class="logo">
+        <img src="img/irancell-logo.png" alt="ایرانسل 35012 صومعه سرا" class="logo">
     </header>
 
     <nav>
-        <a href="#services">خدمات</a>
-        <a href="#about">درباره ما</a>
+        <a href="#services">خدمات ما</a>
         <a href="#contact">تماس با ما</a>
+        <a href="#location">موقعیت مکانی</a>
     </nav>
 
     <section class="hero">
         <div>
-            <h1>دفتر خدمات ایرانسل</h1>
-            <p>ارائه دهنده بهترین خدمات ارتباطی و اینترنتی</p>
-            <button style="margin-top: 2rem; padding: 1rem 2rem; background-color: #ffd700; border: none; border-radius: 5px; cursor: pointer;">
-                تماس با ما
-            </button>
+            <h1>مرکز خدمات ایرانسل 35012 صومعه سرا</h1>
+            <p>ارائه دهنده خدمات تخصصی ایرانسل در استان گیلان</p>
         </div>
     </section>
 
+    <div class="contact-box">
+        <h2>اطلاعات تماس</h2>
+        <div style="margin: 1.5rem 0;">
+            <p style="font-size: 1.2rem;">
+                <i class="fas fa-phone"></i> 
+                تلفن: 01344339109
+            </p>
+            <p style="font-size: 1.2rem;">
+                <i class="fas fa-map-marker-alt"></i> 
+                آدرس: صومعه سرا کنار شیرینی اشهدی- کدپستی 4361915615
+            </p>
+        </div>
+        <button style="padding: 12px 30px; background: #004a8d; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            دریافت نوبت آنلاین
+        </button>
+    </div>
+
     <section id="services" class="services">
-        <h2 style="text-align: center; margin-bottom: 2rem;">خدمات ما</h2>
+        <h2 style="text-align: center; margin-bottom: 2rem;">خدمات تخصصی ما</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
             <div class="service-card">
                 <i class="fas fa-sim-card fa-3x" style="color: #004a8d;"></i>
                 <h3>فروش سیم کارت</h3>
-                <p>سیم کارت دائمی و اعتباری با بهترین قیمت</p>
+                <p>انواع مودمهای سیمکارتی</p>
             </div>
             <div class="service-card">
-                <i class="fas fa-wifi fa-3x" style="color: #004a8d;"></i>
-                <h3>بسته های اینترنتی</h3>
-                <p>خرید انواع بسته های اینترنت همراه و ثابت</p>
+                <i class="fas fa-mobile-alt fa-3x" style="color: #004a8d;"></i>
+                <h3>فعالسازی سیمکارت</h3>
+                <p>فعالسازی و رفع مشکلات سیمکارت</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-headset fa-3x" style="color: #004a8d;"></i>
                 <h3>پشتیبانی فنی</h3>
-                <p>رفع مشکلات فنی و ارتباطی</p>
+                <p>رفع مشکلات فنی و ارتباطی 24 ساعته</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="contact-info">
-            <div>
-                <h4>تماس با ما</h4>
-                <p><i class="fas fa-phone"></i> 021-12345678</p>
-                <p><i class="fas fa-map-marker-alt"></i> تهران، خیابان نمونه</p>
+    <footer id="contact">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="margin: 1rem;">
+                <h4>ساعات کاری</h4>
+                <p>شنبه تا پنج‌شنبه: 9/30 صبح تا 13/30 عصر</p>
+                <p>عصرها 17 تا 19</p>
             </div>
-            <div>
-                <h4>شبکه های اجتماعی</h4>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <div style="margin: 1rem;">
+                <h4>ارتباط اضطراری</h4>
+                <p>شماره پشتیبانی: 01344339109</p>
+                <p>ایمیل: mtnirancell35012@gmail.com</p>
             </div>
         </div>
     </footer>
