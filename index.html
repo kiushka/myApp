@@ -1,11 +1,172 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>فروشگاه ما</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دفتر خدمات ایرانسل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        /* هدر */
+        header {
+            background-color: #fff;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        /* نوار ناوبری */
+        nav {
+            background-color: #004a8d;
+            padding: 1rem;
+            margin-top: 80px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* بخش اصلی */
+        .hero {
+            background: linear-gradient(rgba(0,74,141,0.8), rgba(0,74,141,0.8)),
+                        url('https://example.com/background.jpg');
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* خدمات */
+        .services {
+            padding: 4rem 2rem;
+            background-color: white;
+        }
+
+        .service-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* فوتر */
+        footer {
+            background-color: #004a8d;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        /* رسپانسیو */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 1rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>خوش آمدید به وب‌اپ فروشگاه!</h2>
-    <p>این یک نمونه ساده برای تست روی Render است.</p>
+    <header>
+        <img src="https://example.com/irancell-logo.png" alt="Irancell Logo" class="logo">
+    </header>
+
+    <nav>
+        <a href="#services">خدمات</a>
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس با ما</a>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>دفتر خدمات ایرانسل</h1>
+            <p>ارائه دهنده بهترین خدمات ارتباطی و اینترنتی</p>
+            <button style="margin-top: 2rem; padding: 1rem 2rem; background-color: #ffd700; border: none; border-radius: 5px; cursor: pointer;">
+                تماس با ما
+            </button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 style="text-align: center; margin-bottom: 2rem;">خدمات ما</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            <div class="service-card">
+                <i class="fas fa-sim-card fa-3x" style="color: #004a8d;"></i>
+                <h3>فروش سیم کارت</h3>
+                <p>سیم کارت دائمی و اعتباری با بهترین قیمت</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-wifi fa-3x" style="color: #004a8d;"></i>
+                <h3>بسته های اینترنتی</h3>
+                <p>خرید انواع بسته های اینترنت همراه و ثابت</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-headset fa-3x" style="color: #004a8d;"></i>
+                <h3>پشتیبانی فنی</h3>
+                <p>رفع مشکلات فنی و ارتباطی</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <div>
+                <h4>تماس با ما</h4>
+                <p><i class="fas fa-phone"></i> 021-12345678</p>
+                <p><i class="fas fa-map-marker-alt"></i> تهران، خیابان نمونه</p>
+            </div>
+            <div>
+                <h4>شبکه های اجتماعی</h4>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
